@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edge_lr">24dp</dimen>
+    <dimen name="login_lr">48dp</dimen>
+    <dimen name="big_size">17sp</dimen>
+    <dimen name="big_big_size">24sp</dimen>
+    <dimen name="small_size">13sp</dimen>
+    <dimen name="small_mid_size">11sp</dimen>
+    <dimen name="small_small_size">9sp</dimen>
+    <dimen name="middle_size">15sp</dimen>
+    <dimen name="common_radius">16dp</dimen>
+    <dimen name="color_size">20dp</dimen>
+    <dimen name="youjiantou_left">7dp</dimen>
+    <dimen name="personal_item_vertical">14dp</dimen>
+    <dimen name="personal_item_yes">50dp</dimen>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.MainPageActivity"
+    android:orientation="vertical">
+    <fragment
+        android:id="@+id/topViewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.android.librarybase.topview.TopViewFragment"
+        />
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/main_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_titleText="首页"
+        app:tb_titleTextSize="17sp"
+        app:tb_useThemeColor="false"
+        app:tb_titleTextColor="@color/black"
+        android:background="@color/main_bar_color"
+        android:layout_below="@id/topViewFragment"/>
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg"
+        android:layout_below="@+id/main_top_bar"/>
+
+
+    <com.android.todolist.Main.MainViewPager
+        android:id="@+id/view_pager"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_view"
+        android:layout_above="@+id/bottom_bar"/>
+
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_bg"
+
+        >
+        <LinearLayout
+            android:id="@+id/l_layout_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_black"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/img_margin_top_bottom_bar"/>
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/home"
+                android:textSize="@dimen/word_bottom_bar"
+                android:layout_marginTop="@dimen/img_and_word_bottom_bar"
+                android:textColor="@color/main_black"
+                android:layout_marginBottom="@dimen/word_margin_bottom_bottom_bar"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l_layout_plan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/img_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plan_black"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/img_margin_top_bottom_bar"/>
+            <TextView
+                android:id="@+id/tv_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/plan"
+                android:textSize="@dimen/word_bottom_bar"
+                android:layout_marginTop="@dimen/img_and_word_bottom_bar"
+                android:textColor="@color/main_black"
+                android:layout_marginBottom="@dimen/word_margin_bottom_bottom_bar"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l_layout_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/img_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mine_black"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/img_margin_top_bottom_bar"/>
+            <TextView
+                android:id="@+id/tv_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mine"
+                android:textSize="@dimen/word_bottom_bar"
+                android:layout_marginTop="@dimen/img_and_word_bottom_bar"
+                android:textColor="@color/main_black"
+                android:layout_marginBottom="@dimen/word_margin_bottom_bottom_bar"/>
+        </LinearLayout>
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+</RelativeLayout>

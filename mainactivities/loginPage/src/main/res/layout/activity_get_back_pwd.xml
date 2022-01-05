@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetBackPwdActivity"
+    android:background="@color/white">
+
+    <fragment
+        android:id="@+id/topViewFragment"
+        android:name="com.android.librarybase.topview.TopViewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="124dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale">
+
+            <com.xuexiang.xui.widget.edittext.ClearEditText
+                android:id="@+id/edit_get_back_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="输入账号"
+                android:inputType="phone"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                app:pet_enableIconAlpha="true"
+                app:pet_isAsteriskStyle="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale">
+
+            <com.xuexiang.xui.widget.edittext.PasswordEditText
+                android:id="@+id/edit_get_back_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="输入密码"
+                android:inputType="textPassword"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                app:pet_enableIconAlpha="true"
+                app:pet_isAsteriskStyle="true"
+                app:pet_hoverShowsPw="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale">
+
+            <com.xuexiang.xui.widget.edittext.PasswordEditText
+                android:id="@+id/edit_get_back_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                app:pet_enableIconAlpha="true"
+                app:pet_isAsteriskStyle="true"
+                app:pet_hoverShowsPw="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        <EditText-->
+<!--            android:id="@+id/edit_get_back_username"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginLeft="@dimen/register_edit_margin_lr"-->
+<!--            android:layout_marginTop="@dimen/register_edit_margin_tb"-->
+<!--            android:layout_marginRight="@dimen/register_edit_margin_lr"-->
+<!--            android:layout_marginBottom="@dimen/register_edit_margin_tb"-->
+<!--            android:layout_weight="1"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="phone" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/edit_get_back_password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginLeft="@dimen/register_edit_margin_lr"-->
+<!--            android:layout_marginTop="@dimen/register_edit_margin_tb"-->
+<!--            android:layout_marginRight="@dimen/register_edit_margin_lr"-->
+<!--            android:layout_marginBottom="@dimen/register_edit_margin_tb"-->
+<!--            android:layout_weight="1"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPassword" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/edit_get_back_confirm"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginLeft="@dimen/register_edit_margin_lr"-->
+<!--            android:layout_marginTop="@dimen/register_edit_margin_tb"-->
+<!--            android:layout_marginRight="@dimen/register_edit_margin_lr"-->
+<!--            android:layout_marginBottom="@dimen/register_edit_margin_tb"-->
+<!--            android:layout_weight="1"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPassword" />-->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_finish_get_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="找回"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FanKuiActivity"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+    <fragment
+        android:id="@+id/topViewFragment01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.android.librarybase.topview.TopViewFragment"
+        android:background="@color/main_bg"
+        />
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/set_labels_top_bar"
+        android:layout_below="@id/topViewFragment01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_leftImageResource="@drawable/add_plan_jiantou_black"
+        app:tb_leftText="返回"
+        app:tb_titleText="标签"
+        app:tb_titleTextSize="17sp"
+        app:tb_useThemeColor="false"
+        app:tb_sideTextColor="@color/black"
+        app:tb_titleTextColor="@color/black"
+        android:background="@color/main_bar_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tags_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_add_tag"
+        android:layout_below="@+id/set_labels_top_bar"
+        android:layout_marginHorizontal="@dimen/edge_lr"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_add_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/main_green"
+        android:layout_marginVertical="@dimen/edge_lr"
+        app:contentPaddingBottom="10dp"
+        app:contentPaddingTop="10dp"
+        app:contentPaddingLeft="30dp"
+        app:contentPaddingRight="30dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/big_size"
+            android:textColor="@color/white"
+            android:text="添加标签"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

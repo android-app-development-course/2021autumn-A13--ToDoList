@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="APPTheme" parent="XUITheme">
+        <!--标题栏的颜色-->
+        <item name="colorPrimary">@color/white</item>
+        <!--状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <!--默认的光标、选中的RadioButton颜色-->
+        <item name="colorAccent">@color/main_green</item>
+        <item name="colorOnPrimary">@color/main_green</item>
+        <item name="color">@color/main_green</item>
+        <!-- 默认 Button,TextView的文字颜色 -->
+        <item name="android:textColor">@color/main_black</item>
+        <!-- 默认 EditView 输入框字体的颜色 -->
+        <item name="android:editTextColor">@color/main_black</item>
+        <!-- RadioButton checkbox等控件的文字 -->
+        <item name="android:textColorPrimaryDisableOnly">@color/main_black</item>
+        <!-- 应用的主要文字颜色,actionBar的标题文字默认使用该颜色 -->
+        <item name="android:textColorPrimary">@color/main_black</item>
+        <!-- 辅助的文字颜色，一般比textColorPrimary的颜色弱一点，用于一些弱化的表示 -->
+        <item name="android:textColorSecondary">@color/main_grad</item>
+
+    </style>
+    <style name="QMUIPullRefresh" parent="QMUI.Compat">
+        <item name="qmui_skin_support_pull_refresh_view_color">@color/main_green</item>
+    </style>
+    <style name="QMUIAPPTheme" parent="QMUI.Compat">
+        <!--标题栏的颜色-->
+        <item name="colorPrimary">@color/white</item>
+        <!--状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <!--默认的光标、选中的RadioButton颜色-->
+        <item name="colorAccent">@color/main_green</item>
+        <item name="colorOnPrimary">@color/main_green</item>
+        <item name="color">@color/main_green</item>
+        <!-- 默认 Button,TextView的文字颜色 -->
+        <item name="android:textColor">@color/main_black</item>
+        <!-- 默认 EditView 输入框字体的颜色 -->
+        <item name="android:editTextColor">@color/main_black</item>
+        <!-- RadioButton checkbox等控件的文字 -->
+        <item name="android:textColorPrimaryDisableOnly">@color/main_black</item>
+        <!-- 应用的主要文字颜色,actionBar的标题文字默认使用该颜色 -->
+        <item name="android:textColorPrimary">@color/main_black</item>
+        <!-- 辅助的文字颜色，一般比textColorPrimary的颜色弱一点，用于一些弱化的表示 -->
+        <item name="android:textColorSecondary">@color/main_grad</item>
+        <item name="qmui_skin_support_dialog_positive_action_text_color">@color/main_green</item>
+        <item name="qmui_skin_support_dialog_negative_action_text_color">@color/main_green</item>
+        <item name="qmui_statusBarScrim">@color/white</item>
+<!--        &lt;!&ndash;        &lt;!&ndash; 避免控件会顶到状态栏上 &ndash;&gt;&ndash;&gt;-->
+<!--        <item name="android:fitsSystemWindows">false</item>-->
+    </style>
+    <style name="MyDatePickerDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/main_green</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">@color/main_black</item>
+    </style>
+</resources>

@@ -1,0 +1,25 @@
+ext{
+    //是否是发布（集成）模式
+    isRelease = true
+
+    username="zhaowenzhuo"
+
+    app_android=[
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            applicationId: "com.android.todolist",
+            minSdkVersion: 24,
+            targetSdkVersion :30,
+            versionCode: 1,
+            versionName: "1.0",
+            sourceCompatibility: JavaVersion.VERSION_1_8,
+            targetCompatibility: JavaVersion.VERSION_1_8,
+
+    ]
+
+    libARouter = "com.alibaba:arouter-api:1.5.1"
+    libARouterCompiler = "com.alibaba:arouter-compiler:1.5.1"
+    libGson = "com.google.code.gson:gson:1.5.1"
+
+
+}

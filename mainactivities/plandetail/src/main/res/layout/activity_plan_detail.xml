@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <fragment
+      android:id="@+id/topViewFragment"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:name="com.android.librarybase.topview.TopViewFragment"
+      android:background="@color/main_bg"
+      />
+  <com.xuexiang.xui.widget.actionbar.TitleBar
+      android:id="@+id/top_bar_detail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:tb_leftImageResource="@drawable/add_plan_jiantou_black"
+      app:tb_leftText="取消"
+      app:tb_titleText="添加计划"
+      app:tb_titleTextSize="17sp"
+      app:tb_useThemeColor="false"
+      app:tb_sideTextColor="@color/black"
+      app:tb_titleTextColor="@color/black"
+      android:background="@color/main_bar_color"/>
+
+  <androidx.core.widget.NestedScrollView
+
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/main_bg"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.064" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.872"
+            tools:context=".addPlan.AddPlanActivity"
+            android:orientation="vertical">
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="20dp"
+              />
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/main_black"
+                android:text="标签"/>
+<!--            android:layout_marginTop="7dp"-->
+            <FrameLayout
+                android:id="@+id/fl_add_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/bg_ripple">
+              <TextView
+                  android:id="@+id/tv_add_tag"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="添加标签"
+                  android:textSize="@dimen/middle_size"
+                  android:textColor="@color/main_green" />
+            </FrameLayout>
+          </LinearLayout>
+
+          <com.xuexiang.xui.widget.flowlayout.FlowTagLayout
+              android:id="@+id/flowlayout_single_select"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="18dp"
+              android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                app:cardBackgroundColor="@color/main_edit_grad"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/add_plan_title_grad"
+                    android:layout_marginLeft="20dp" />
+
+                <EditText
+                    android:id="@+id/edit_name_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint="计划标题"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/main_black"
+                    android:theme="@style/APPTheme"/>
+              </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="23dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全天"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/big_size"
+                    android:textColor="@color/main_black" />
+                <com.xuexiang.xui.widget.button.switchbutton.SwitchButton
+                    android:id="@+id/btn_all_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    app:swb_backColor="@drawable/switch_btn_back"
+                    app:swb_thumbColor="@color/white"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="开始时间"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"
+                  android:textSize="@dimen/big_size"
+                  android:textColor="@color/main_black" />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerInParent="true"
+                  android:orientation="horizontal">
+                <com.xuexiang.xui.widget.button.ButtonView
+                    android:id="@+id/btn_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/middle_size"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="2021/12/18"
+                    android:textColor="@color/main_black"
+                    app:textSolidColor="@color/main_btn_normal_grad"
+                    app:textSelectedSolidColor="@color/main_btn_select_grad"
+
+                    />
+                <com.xuexiang.xui.widget.button.ButtonView
+                    android:id="@+id/btn_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/middle_size"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="10:00"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/main_black"
+                    app:textSolidColor="@color/main_btn_normal_grad"
+                    app:textSelectedSolidColor="@color/main_btn_select_grad"
+                    />
+              </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:background="@color/white">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="结束时间"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"
+                  android:textSize="@dimen/big_size"
+                  android:textColor="@color/main_black" />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerInParent="true"
+                  android:orientation="horizontal">
+                <com.xuexiang.xui.widget.button.ButtonView
+                    android:id="@+id/btn_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/middle_size"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="2021/12/18"
+                    android:textColor="@color/main_black"
+                    app:textSolidColor="@color/main_btn_normal_grad"
+                    app:textSelectedSolidColor="@color/main_btn_select_grad"
+
+                    />
+                <com.xuexiang.xui.widget.button.ButtonView
+                    android:id="@+id/btn_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/middle_size"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="10:00"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/main_black"
+                    app:textSolidColor="@color/main_btn_normal_grad"
+                    app:textSelectedSolidColor="@color/main_btn_select_grad"
+                    />
+              </LinearLayout>
+            </RelativeLayout>
+
+
+            <com.xuexiang.xui.widget.edittext.MultiLineEditText
+                android:id="@+id/edit_content_detali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                app:mlet_hintText="写点什么吧"
+                android:textSize="15sp"
+                android:theme="@style/APPTheme"
+                android:background="@color/main_edit_grad" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_add_detail"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/main_green"
+                app:cardCornerRadius="16dp"
+                android:layout_marginVertical="32dp"
+                app:cardElevation="0dp"
+                >
+              <TextView
+                  android:id="@+id/btn_add_text_detail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:textSize="17sp"
+                  android:textColor="@color/white"
+                  android:layout_marginHorizontal="36dp"
+                  android:layout_marginVertical="14dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18dp" />
+
+          </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.064"/>
+      </LinearLayout>
+    </LinearLayout>
+
+
+
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

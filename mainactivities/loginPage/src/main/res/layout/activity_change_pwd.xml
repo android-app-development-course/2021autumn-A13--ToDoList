@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/white">
+
+    <fragment
+        android:id="@+id/topViewFragment"
+        android:name="com.android.librarybase.topview.TopViewFragment"
+        android:layout_width="82dp"
+        android:layout_height="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/change_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bar_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topViewFragment"
+        app:tb_leftImageResource="@drawable/add_plan_jiantou_black"
+        app:tb_leftText="返回"
+        app:tb_sideTextColor="@color/black"
+        app:tb_titleText="修改密码"
+        app:tb_titleTextColor="@color/black"
+        app:tb_titleTextSize="17sp"
+        app:tb_useThemeColor="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_top_bar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/login_lr">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            app:hintTextColor="@color/main_green">
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/edit_old_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="原密码"
+                android:inputType="textPassword"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/big_size"
+                android:theme="@style/LoginTheme"
+                app:met_iconLeft="@drawable/login_password"
+                app:met_passWordButton="true"
+                app:met_validateOnFocusLost="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            app:hintTextColor="@color/main_green">
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/edit_new_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="输入密码"
+                android:inputType="textPassword"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/big_size"
+                android:theme="@style/LoginTheme"
+                app:met_iconLeft="@drawable/login_password"
+                app:met_passWordButton="true"
+                app:met_validateOnFocusLost="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            app:hintTextColor="@color/main_green">
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/edit_new_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/big_size"
+                android:theme="@style/LoginTheme"
+                app:met_iconLeft="@drawable/login_password"
+                app:met_passWordButton="true"
+                app:met_validateOnFocusLost="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/edit_get_back_password"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginLeft="@dimen/register_edit_margin_lr"-->
+        <!--            android:layout_marginTop="@dimen/register_edit_margin_tb"-->
+        <!--            android:layout_marginRight="@dimen/register_edit_margin_lr"-->
+        <!--            android:layout_marginBottom="@dimen/register_edit_margin_tb"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPassword" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/edit_get_back_confirm"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginLeft="@dimen/register_edit_margin_lr"-->
+        <!--            android:layout_marginTop="@dimen/register_edit_margin_tb"-->
+        <!--            android:layout_marginRight="@dimen/register_edit_margin_lr"-->
+        <!--            android:layout_marginBottom="@dimen/register_edit_margin_tb"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPassword" />-->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintWidth_percent="0.3"
+        android:text="确认"
+        android:textSize="@dimen/big_size"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

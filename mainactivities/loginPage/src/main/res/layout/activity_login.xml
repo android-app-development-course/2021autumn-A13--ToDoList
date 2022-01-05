@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white">
+
+    <fragment
+        android:id="@+id/topViewFragment"
+        android:name="com.android.librarybase.topview.TopViewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintWidth_percent="0.3"
+        android:text="登录"
+        android:textSize="@dimen/big_size"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.75">
+
+        <TextView
+            android:id="@+id/tv_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/small_size"
+            android:text="注册"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/tv_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/small_size"
+            android:paddingHorizontal="10dp"
+            android:text="|" />
+        <TextView
+            android:id="@+id/tv_to_get_back_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/small_size"
+            android:text="找回密码"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/login_lr"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topViewFragment"
+        app:layout_constraintVertical_bias="0.413">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            app:hintTextColor="@color/main_green">
+
+            <!--            <com.xuexiang.xui.widget.edittext.ClearEditText-->
+            <!--                android:id="@+id/edit_login_username"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:hint="输入账号"-->
+            <!--                android:textSize="@dimen/big_size"-->
+            <!--                android:inputType="phone"-->
+            <!--                android:layoutDirection="locale"-->
+            <!--                android:textAlignment="viewStart"-->
+            <!--                app:pet_enableIconAlpha="true"-->
+            <!--                app:pet_isAsteriskStyle="true" />-->
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/edit_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="输入账号"
+                android:inputType="phone"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/big_size"
+                app:met_iconLeft="@drawable/login_username"
+                app:met_validateOnFocusLost="true"
+                android:theme="@style/LoginTheme"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--        <EditText-->
+        <!--            android:id="@+id/edit_login_password"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginLeft="@dimen/login_edit_margin_lr"-->
+        <!--            android:layout_marginTop="@dimen/login_edit_margin_tb"-->
+        <!--            android:layout_marginRight="@dimen/login_edit_margin_lr"-->
+        <!--            android:layout_marginBottom="@dimen/login_edit_margin_tb"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPassword" />-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_edit_margin_lr"
+            android:layout_marginTop="@dimen/login_edit_margin_tb"
+            android:layout_marginRight="@dimen/login_edit_margin_lr"
+            android:layout_marginBottom="@dimen/login_edit_margin_tb"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textDirection="locale"
+            app:hintTextColor="@color/main_green">
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/edit_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="输入密码"
+                android:inputType="textPassword"
+                android:layoutDirection="locale"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/big_size"
+                app:met_iconLeft="@drawable/login_password"
+                app:met_passWordButton="true"
+                app:met_validateOnFocusLost="true"
+                android:theme="@style/LoginTheme"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToDoList"
+        android:textColor="@color/main_clear_black"
+        android:textSize="@dimen/big_big_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

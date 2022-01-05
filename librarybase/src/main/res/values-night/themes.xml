@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="APPTheme" parent="XUITheme">-->
+<!--        &lt;!&ndash;标题栏的颜色&ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/main_black</item>-->
+<!--        &lt;!&ndash;状态栏的颜色&ndash;&gt;-->
+<!--        <item name="colorPrimaryDark">@color/main_black</item>-->
+<!--        <item name="android:statusBarColor">@color/main_black</item>-->
+<!--        &lt;!&ndash;默认的光标、选中的RadioButton颜色&ndash;&gt;-->
+<!--        <item name="colorAccent">@color/main_green</item>-->
+<!--        &lt;!&ndash; 默认 Button,TextView的文字颜色 &ndash;&gt;-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        &lt;!&ndash; 默认 EditView 输入框字体的颜色 &ndash;&gt;-->
+<!--        <item name="android:editTextColor">@color/white</item>-->
+<!--        &lt;!&ndash; RadioButton checkbox等控件的文字 &ndash;&gt;-->
+<!--        <item name="android:textColorPrimaryDisableOnly">@color/white</item>-->
+<!--        &lt;!&ndash; 应用的主要文字颜色,actionBar的标题文字默认使用该颜色 &ndash;&gt;-->
+<!--        <item name="android:textColorPrimary">@color/white</item>-->
+<!--        &lt;!&ndash; 辅助的文字颜色，一般比textColorPrimary的颜色弱一点，用于一些弱化的表示 &ndash;&gt;-->
+<!--        <item name="android:textColorSecondary">@color/main_grad</item>-->
+
+<!--    </style>-->
+<!--    <style name="MyDatePickerDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">-->
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+<!--        <item name="android:windowBackground">@color/main_green</item>-->
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowIsFloating">true</item>-->
+<!--        <item name="android:backgroundDimEnabled">true</item>-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="colorAccent">@color/white</item>-->
+<!--    </style>-->
+</resources>

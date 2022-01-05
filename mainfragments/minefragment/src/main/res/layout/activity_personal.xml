@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FanKuiActivity"
+    android:orientation="vertical"
+    android:background="@color/main_bg">
+    <fragment
+        android:id="@+id/topViewFragment02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.android.librarybase.topview.TopViewFragment"
+        android:background="@color/main_bg"
+        />
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/personal_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_leftImageResource="@drawable/add_plan_jiantou_black"
+        app:tb_leftText="返回"
+        app:tb_titleText="个人中心"
+        app:tb_titleTextSize="17sp"
+        app:tb_useThemeColor="false"
+        app:tb_sideTextColor="@color/black"
+        app:tb_titleTextColor="@color/black"
+        android:background="@color/main_bar_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg"
+        android:layout_below="@+id/main_top_bar"/>
+    <RelativeLayout
+        android:id="@+id/change_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="@dimen/edge_lr"
+        android:background="@drawable/personal_item_selector"
+        >
+        <!--        <com.xuexiang.xui.widget.imageview.RadiusImageView-->
+        <!--            android:id="@+id/img_header"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:src="@drawable/touxiang"-->
+        <!--            app:riv_is_circle="true" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:textSize="@dimen/middle_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_header"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:src="@drawable/touxiang01"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/jiantou_right00"
+            />
+        <ImageView
+            android:id="@+id/jiantou_right00"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/youjiantou_left"
+            android:background="@drawable/jiantou_right_grad"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/main_grad"
+        android:layout_marginLeft="@dimen/edge_lr"/>
+
+    <RelativeLayout
+        android:id="@+id/change_name"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/personal_item_selector"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/edge_lr"
+        android:paddingVertical="@dimen/personal_item_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="昵称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle_size" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/jiantou_right01"
+            android:text="我"
+            android:textColor="@color/main_deep_grad"
+            android:textSize="@dimen/middle_size" />
+
+        <ImageView
+            android:id="@+id/jiantou_right01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/youjiantou_left"
+            android:background="@drawable/jiantou_right_grad" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/main_grad"
+        android:layout_marginLeft="@dimen/edge_lr"/>
+    <RelativeLayout
+        android:id="@+id/change_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/personal_item_vertical"
+        android:paddingHorizontal="@dimen/edge_lr"
+        android:background="@drawable/personal_item_selector"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:textSize="@dimen/middle_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/text_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:textSize="@dimen/middle_size"
+            android:layout_centerInParent="true"
+            android:textColor="@color/main_deep_grad"
+            android:layout_toLeftOf="@+id/jiantou_right02"/>
+        <ImageView
+            android:id="@+id/jiantou_right02"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/youjiantou_left"
+            android:background="@drawable/jiantou_right_grad"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg"
+        android:layout_below="@+id/main_top_bar"/>
+    <RelativeLayout
+        android:id="@+id/change_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/personal_item_vertical"
+        android:paddingHorizontal="@dimen/edge_lr"
+        android:background="@drawable/personal_item_selector"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="@dimen/middle_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/text_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18575062745"
+            android:textSize="@dimen/middle_size"
+            android:layout_centerInParent="true"
+            android:textColor="@color/main_deep_grad"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/main_grad"
+        android:layout_marginLeft="@dimen/edge_lr"/>
+    <RelativeLayout
+        android:id="@+id/change_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/personal_item_vertical"
+        android:paddingHorizontal="@dimen/edge_lr"
+        android:background="@drawable/personal_item_selector"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改密码"
+            android:textSize="@dimen/middle_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="********"
+            android:textSize="@dimen/middle_size"
+            android:layout_centerInParent="true"
+            android:textColor="@color/main_deep_grad"
+            android:layout_toLeftOf="@+id/jiantou_right03"/>
+        <ImageView
+            android:id="@+id/jiantou_right03"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/youjiantou_left"
+            android:background="@drawable/jiantou_right_grad"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

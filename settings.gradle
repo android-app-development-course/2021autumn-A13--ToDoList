@@ -1,0 +1,11 @@
+include ':mainactivities:plandetail'
+include ':functions:commonrecyclelist'
+include ':functions:functimeline'
+include ':mainfragments:planfragment'
+include ':librarydb'
+include ':librarybase'
+include ':mainactivities:loginPage'
+include ':mainfragments:minefragment'
+include ':mainfragments:homefragment'
+include ':app'
+rootProject.name = "ToDoList"

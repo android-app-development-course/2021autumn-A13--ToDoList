@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_edit_margin_lr">20dp</dimen>
+    <dimen name="login_edit_margin_tb">10dp</dimen>
+    <dimen name="register_edit_margin_lr">20dp</dimen>
+    <dimen name="register_edit_margin_tb">10dp</dimen>
+</resources>

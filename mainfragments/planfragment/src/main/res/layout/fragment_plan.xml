@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginHorizontal="@dimen/left_edge"
+            android:paddingBottom="5dp">
+
+            <View
+                android:id="@+id/top_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
+            <TextView
+                android:id="@+id/tv_month_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/text_month_day"
+                android:layout_below="@+id/top_view"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_month_day"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/main_grad"
+                    android:textSize="@dimen/text_year_lunar" />
+
+                <TextView
+                    android:id="@+id/tv_lunar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center"
+                    android:textColor="@color/main_grad"
+                    android:textSize="@dimen/text_year_lunar" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/top_view_bottom"
+                android:layout_width="4dp"
+                android:layout_height="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/top_view"/>
+            <TextView
+                android:id="@+id/now_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/small_small_size"
+                android:layout_toLeftOf="@+id/ll_start_reverse"
+                android:layout_marginRight="5dp"
+                android:ems="1"/>
+            <LinearLayout
+                android:id="@+id/ll_start_reverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/fl_sort"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/now_is_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_deep_grad"
+                    android:textSize="@dimen/small_mid_size"
+                    android:text="开始"/>
+                <TextView
+                    android:id="@+id/now_is_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/main_deep_grad"
+                    android:textSize="@dimen/small_mid_size"
+                    android:text="正序"/>
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/fl_sort"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toLeftOf="@+id/fl_current"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_ripple"
+                android:layout_marginRight="5dp">
+                <ImageView
+                    android:id="@+id/ib_sort"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_sort" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_current"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_toLeftOf="@+id/fl_set"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_ripple"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:id="@+id/ib_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_calendar_to_today" />
+
+                <TextView
+                    android:id="@+id/tv_current_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="13"
+                    android:textColor="@color/main_deep_grad"
+                    android:textSize="12sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_set"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_ripple">
+                <ImageView
+                    android:id="@+id/ib_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_other_set" />
+            </FrameLayout>
+<!--            <Button-->
+<!--                android:id="@+id/btn_add_plan"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="+ 添加计划"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="@color/main_green"-->
+<!--                android:layout_above="@+id/fl_current"/>-->
+        </RelativeLayout>
+
+
+        <com.haibin.calendarview.CalendarLayout
+            android:id="@+id/calendarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.83"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:default_status="shrink"
+            app:calendar_show_mode="both_month_week_view"
+            app:calendar_content_view_id="@+id/time_line_plans">
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:calendar_padding="10dp"
+                app:current_day_lunar_text_color="@color/main_green"
+                app:current_day_text_color="@color/main_green"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:max_year="2037"
+                app:min_year="2000"
+                app:month_view="com.android.planfragment.chineseCalendar.CustomMonthView"
+                app:month_view_show_mode="mode_fix"
+                app:other_month_lunar_text_color="#e1e1e1"
+                app:other_month_text_color="#e1e1e1"
+                app:scheme_text="假"
+                app:scheme_text_color="#333"
+                app:scheme_theme_color="#128c4b"
+                app:selected_lunar_text_color="#fff"
+                app:selected_text_color="#fff"
+                app:selected_theme_color="@color/main_green"
+                app:week_background="#fff"
+                app:week_start_with="sun"
+                app:week_text_color="@color/main_grad"
+                app:week_view="com.android.planfragment.chineseCalendar.CustomWeekView"
+                />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/time_line_plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/main_bg">
+
+                    <fragment
+                        android:id="@+id/timeline_fragment"
+                        android:name="com.android.functimeline.TimeLineFuncFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.core.widget.NestedScrollView>
+
+
+        </com.haibin.calendarview.CalendarLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_bar_margin_lr">12dp</dimen>
+    <dimen name="bottom_bar_margin_tb">12dp</dimen>
+    <dimen name="word_bottom_bar">13sp</dimen>
+    <dimen name="img_and_word_bottom_bar">5dp</dimen>
+    <dimen name="img_margin_top_bottom_bar">5dp</dimen>
+    <dimen name="word_margin_bottom_bottom_bar">5dp</dimen>
+</resources>

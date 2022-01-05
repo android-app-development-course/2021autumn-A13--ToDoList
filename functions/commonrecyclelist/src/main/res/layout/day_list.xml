@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tagbig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:layout_marginVertical="5dp"
+        app:cardElevation="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginVertical="7.5dp"
+            android:layout_marginHorizontal="7.5dp">
+
+            <LinearLayout
+                android:id="@+id/checkboxlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.xuexiang.xui.widget.button.SmoothCheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="left|top"
+                    android:layout_marginHorizontal="7.5dp"
+                    android:layout_marginVertical="5dp"
+                    android:focusable="false"
+                    app:scb_color_checked="@color/main_green" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/day_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="学大物"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginVertical="2.5dp"/>
+                <TextView
+                    android:id="@+id/month_day_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12月01日 13:01"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_marginVertical="2.5dp"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginVertical="2.5dp"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/card_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/pos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tag_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="学习"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="2dp"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <EditText
+        android:id="@+id/edit_tag_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/APPTheme"
+        android:textColor="@color/main_black"
+        android:textSize="@dimen/big_size"
+        android:hint="标签名称"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.xuexiang.xui.widget.button.SmoothCheckBox
+            android:id="@+id/green_tag"
+            android:layout_width="@dimen/color_size"
+            android:layout_height="@dimen/color_size"
+            app:scb_color_checked="@color/main_green"
+            app:scb_color_unchecked="@color/main_green"
+            app:scb_color_unchecked_stroke="@color/main_green"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+        <com.xuexiang.xui.widget.button.SmoothCheckBox
+            android:id="@+id/yellow_tag"
+            android:layout_width="@dimen/color_size"
+            android:layout_height="@dimen/color_size"
+            app:riv_is_circle="true"
+            app:scb_color_checked="@color/main_yellow"
+            app:scb_color_unchecked="@color/main_yellow"
+            app:scb_color_unchecked_stroke="@color/main_yellow"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+        <com.xuexiang.xui.widget.button.SmoothCheckBox
+            android:id="@+id/purple_tag"
+            android:layout_width="@dimen/color_size"
+            android:layout_height="@dimen/color_size"
+            app:riv_is_circle="true"
+            app:scb_color_checked="@color/main_purple"
+            app:scb_color_unchecked="@color/main_purple"
+            app:scb_color_unchecked_stroke="@color/main_purple"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+        <com.xuexiang.xui.widget.button.SmoothCheckBox
+            android:id="@+id/pink_tag"
+            android:layout_width="@dimen/color_size"
+            android:layout_height="@dimen/color_size"
+            app:riv_is_circle="true"
+            app:scb_color_checked="@color/main_pink"
+            app:scb_color_unchecked="@color/main_pink"
+            app:scb_color_unchecked_stroke="@color/main_pink"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+        <com.xuexiang.xui.widget.button.SmoothCheckBox
+            android:id="@+id/blue_tag"
+            android:layout_width="@dimen/color_size"
+            android:layout_height="@dimen/color_size"
+            app:riv_is_circle="true"
+            app:scb_color_checked="@color/main_blue"
+            app:scb_color_unchecked="@color/main_blue"
+            app:scb_color_unchecked_stroke="@color/main_blue"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

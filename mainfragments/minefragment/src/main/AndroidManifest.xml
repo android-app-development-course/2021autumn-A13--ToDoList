@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.minefragment">
+
+    <application>
+        <activity android:name=".HelpActivity"></activity>
+        <activity android:name=".PersonalActivity" />
+        <activity
+            android:name=".SetLabelsActivity"
+            android:theme="@style/APPTheme" />
+        <activity android:name=".FanKuiActivity" />
+        <activity android:name=".GetBackActivity" />
+        <activity android:name=".MineActivity" />
+    </application>
+
+</manifest>

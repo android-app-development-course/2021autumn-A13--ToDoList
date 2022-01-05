@@ -1,0 +1,7 @@
+<!-- 标签的文字颜色 label_text_color -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 标签选中时的文字颜色 -->
+    <item android:color="@color/main_green" android:state_checked="true" />
+    <!-- 标签的正常文字颜色 -->
+    <item android:color="@color/main_btn_normal_grad" />
+</selector>
